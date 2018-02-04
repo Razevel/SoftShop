@@ -120,19 +120,22 @@
                     <li>
                         @Html.ActionLink("tmp:Админка", "Index", "Admin")
                     </li>
-                    
+
                     @if (Request.IsAuthenticated)
                     {
+                        <li>
+                            @User.Identity.Name
+                        </li>
                         using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new {id = "logoutForm", @class = "navbar-form"}))
-                         {
-                             @Html.AntiForgeryToken()
-                             <li>
-                                 @Html.ActionLink("Личный кабинет", "Index", "Manage", routeValues: null, htmlAttributes: new {title = "Manage"})
-                             </li>
-                             <li>
-                                 <a href="javascript:document.getElementById('logoutForm').submit()">Выход</a>
-                             </li>
-                         }
+                        {
+                            @Html.AntiForgeryToken()
+                            <li>
+                                @Html.ActionLink("Личный кабинет", "Index", "Manage", routeValues: null, htmlAttributes: new {title = "Manage"})
+                            </li>
+                            <li>
+                                <a href="javascript:document.getElementById('logoutForm').submit()">Выход</a>
+                            </li>
+                        }
                     }
                     else
                     {

@@ -15,26 +15,73 @@
     <link rel="stylesheet" type="text/css" href="~/fonts/font-awesome-4.7.0/css/font-awesome.css"/>
 </head>
 <body>
-    
 
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-            
-            <!-- Brand and toggle get grouped for better mobile display -->
+
+<nav class="navbar navbar-default navbar-fixed-top text-center" role="navigation">
+    <div class="container">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @Html.ActionLink("Название", "Index", "Home", null, new {@class = "navbar-brand"})
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+                <li>
+                    @Html.ActionLink("Главная", "Index", "Home")
+                </li>
+                <li>
+                    @Html.ActionLink("Каталог", "Index", "Catalog")
+                </li>
+            </ul>
+
+            @using (@Html.BeginForm("Index", "Catalog", FormMethod.Get, new {@class = "navbar-form navbar-left", role = "Search"}))
+            {
+                <div class="form-group" id="search-form-main">
+                    @Html.TextBox("search", null, new {type = "text", @class = "form-control", placeholder = "Категория/Название"})
+                </div>
+                <button type="submit" class="btn btn-default">Поиск</button>
+            }
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown" id="CartViget">
+                    @Html.Action("Viget", "Cart")
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container body-content" style="padding-bottom: 60px;">
+
+
+    @RenderBody()
+
+
+</div>
+<div id="footer">
+    <hr/>
+    <nav class="navbar navbar-default" role="navigation" style="background-color: #fafafa">
+        <div class="container" style="max-width: 600px;">
+
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Мягко.ru", "Index", "Home", null, new { @class = "navbar-brand" })
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-3">
+
+                <ul class="nav navbar navbar-left">
                     <li>
                         @Html.ActionLink("Главная", "Index", "Home")
                     </li>
@@ -42,34 +89,72 @@
                         @Html.ActionLink("Каталог", "Index", "Catalog")
                     </li>
                     <li>
-                        @Html.ActionLink("Админ панель", "Index", "Admin")
+                        @using (@Html.BeginForm("Index", "Catalog", FormMethod.Get, new {@class = "navbar-form", role = "Search"}))
+                        {
+                            <div class="form-group">
+                                @Html.TextBox("search", null, new {type = "text", placeholder = "Категория/Название"})
+                            </div>
+                            <button type="submit" class="btn btn-default">Поиск</button>
+                        }
                     </li>
                 </ul>
 
-                @using (@Html.BeginForm("Index", "Catalog", FormMethod.Get, new {@class = "navbar-form navbar-left", role = "Search"}))
-                {
-                    <div class="form-group">
-                        @Html.TextBox("search", null, new {type = "text", @class = "form-control", placeholder = "Категория/Название"})
-                    </div>
-                    <button type="submit" class="btn btn-default">Поиск</button>
-                }
-
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown" id="CartViget">
-                        @Html.Action("Viget", "Cart")
+                <ul class="nav navbar navbar-right">
+                    <li>
+                        @Html.ActionLink("Корзина", "Index", "Cart")
                     </li>
+                    <li>
+                        @{
+                            AjaxOptions ajaxOptions = new AjaxOptions
+                            {
+                                UpdateTargetId = "CartViget",
+                                OnComplete = "updateItem()"
+                            };
+                        }
+
+                        @using (Ajax.BeginForm("Clear", "Cart", null, ajaxOptions, new {@class = "form-inline"}))
+                        {
+                            <input type="submit" class="btn btn-link" style="width: 100%;" id="qwqw" value="Очистить корзину"/>
+                        }
+                    </li>
+                    <li>
+                        @Html.ActionLink("tmp:Админка", "Index", "Admin")
+                    </li>
+
+                    @if (Request.IsAuthenticated)
+                    {
+                        <li>
+                            @User.Identity.Name
+                        </li>
+                        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new {id = "logoutForm", @class = "navbar-form"}))
+                        {
+                            @Html.AntiForgeryToken()
+                            <li>
+                                @Html.ActionLink("Личный кабинет", "Index", "Manage", routeValues: null, htmlAttributes: new {title = "Manage"})
+                            </li>
+                            <li>
+                                <a href="javascript:document.getElementById('logoutForm').submit()">Выход</a>
+                            </li>
+                        }
+                    }
+                    else
+                    {
+                        <li>
+                            @Html.ActionLink("Вход", "Login", "Account")
+                        </li>
+
+                        <li>
+                            @Html.ActionLink("Регистрация", "Register", "Account")
+                        </li>
+                    }
+
                 </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
+                <div class="clearfix"></div>
+                <p class="text-center">&copy; @DateTime.Now.Year - created by E. Rodionov</p>
+
+            </div>
+        </div>
     </nav>
-
-
-<div class="container body-content">
-
-
-    @RenderBody()
-    <hr/>
-
 
 </div>
 

@@ -12,6 +12,33 @@
     <File Include="ApplicationInsights.config">
       <publishTime>01/27/2018 22:58:14</publishTime>
     </File>
+    <File Include="assets/images/1-1-640x669.jpg">
+      <publishTime>01/30/2018 19:07:26</publishTime>
+    </File>
+    <File Include="assets/images/16908293-735417253293643-896244887379247104-n-640x640.jpg">
+      <publishTime>01/30/2018 19:07:26</publishTime>
+    </File>
+    <File Include="assets/images/hashes.json">
+      <publishTime>01/30/2018 19:07:26</publishTime>
+    </File>
+    <File Include="assets/images/jumbotron.jpg">
+      <publishTime>01/30/2018 19:07:26</publishTime>
+    </File>
+    <File Include="assets/images/krasivyievyazannyieveshhifo1-523x523.jpg">
+      <publishTime>01/30/2018 19:07:26</publishTime>
+    </File>
+    <File Include="assets/images/logo2.png">
+      <publishTime>01/30/2018 19:07:26</publishTime>
+    </File>
+    <File Include="assets/images/mbr-favicon.png">
+      <publishTime>01/30/2018 19:07:27</publishTime>
+    </File>
+    <File Include="assets/images/modnye-vyazanye-veshi-2017-610x414.jpg">
+      <publishTime>01/30/2018 19:07:26</publishTime>
+    </File>
+    <File Include="assets/images/nitki-klubok-pryazha-111190-3840x2160-3-2000x1125.jpg">
+      <publishTime>01/30/2018 19:07:26</publishTime>
+    </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>02/22/2013 09:43:40</publishTime>
     </File>
@@ -22,49 +49,49 @@
       <publishTime>01/27/2018 22:58:14</publishTime>
     </File>
     <File Include="bin/Domain.dll">
-      <publishTime>01/30/2018 02:58:15</publishTime>
+      <publishTime>02/05/2018 00:22:51</publishTime>
     </File>
     <File Include="bin/Domain.dll.config">
       <publishTime>01/29/2018 13:54:48</publishTime>
     </File>
     <File Include="bin/Domain.pdb">
-      <publishTime>01/30/2018 02:58:15</publishTime>
+      <publishTime>02/05/2018 00:22:51</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
-      <publishTime>03/02/2015 09:32:26</publishTime>
+      <publishTime>02/03/2015 09:32:26</publishTime>
     </File>
     <File Include="bin/EntityFramework.SqlServer.dll">
-      <publishTime>03/02/2015 09:32:26</publishTime>
+      <publishTime>02/03/2015 09:32:26</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>11/30/2016 16:07:42</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.DependencyCollector.dll">
-      <publishTime>12/07/2016 11:45:42</publishTime>
+      <publishTime>07/12/2016 11:45:42</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
-      <publishTime>12/07/2016 11:50:34</publishTime>
+      <publishTime>07/12/2016 11:50:34</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
-      <publishTime>12/06/2016 15:15:48</publishTime>
+      <publishTime>06/12/2016 15:15:48</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Web.dll">
-      <publishTime>12/07/2016 11:49:10</publishTime>
+      <publishTime>07/12/2016 11:49:10</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.WindowsServer.dll">
-      <publishTime>12/07/2016 11:50:34</publishTime>
+      <publishTime>07/12/2016 11:50:34</publishTime>
     </File>
     <File Include="bin/Microsoft.ApplicationInsights.dll">
-      <publishTime>12/06/2016 15:09:52</publishTime>
+      <publishTime>06/12/2016 15:09:52</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
-      <publishTime>04/03/2015 17:07:22</publishTime>
+      <publishTime>03/04/2015 17:07:22</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
-      <publishTime>04/03/2015 17:07:22</publishTime>
+      <publishTime>03/04/2015 17:07:22</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
-      <publishTime>04/03/2015 17:07:22</publishTime>
+      <publishTime>03/04/2015 17:07:22</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>08/15/2017 13:12:32</publishTime>
@@ -97,10 +124,10 @@
       <publishTime>02/13/2015 13:16:42</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
-      <publishTime>01/05/2012 12:08:46</publishTime>
+      <publishTime>05/01/2012 12:08:46</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>08/03/2014 21:33:56</publishTime>
+      <publishTime>03/08/2014 21:33:56</publishTime>
     </File>
     <File Include="bin/Ninject.dll">
       <publishTime>11/13/2017 03:01:30</publishTime>
@@ -262,19 +289,19 @@
       <publishTime>04/13/2017 15:47:48</publishTime>
     </File>
     <File Include="bin/ru/EntityFramework.resources.dll">
-      <publishTime>03/02/2015 09:32:38</publishTime>
+      <publishTime>02/03/2015 09:32:38</publishTime>
     </File>
     <File Include="bin/ru/EntityFramework.SqlServer.resources.dll">
-      <publishTime>03/02/2015 09:32:38</publishTime>
+      <publishTime>02/03/2015 09:32:38</publishTime>
     </File>
     <File Include="bin/ru/Microsoft.AspNet.Identity.Core.resources.dll">
-      <publishTime>04/03/2015 17:09:50</publishTime>
+      <publishTime>03/04/2015 17:09:50</publishTime>
     </File>
     <File Include="bin/ru/Microsoft.AspNet.Identity.EntityFramework.resources.dll">
-      <publishTime>04/03/2015 17:09:52</publishTime>
+      <publishTime>03/04/2015 17:09:52</publishTime>
     </File>
     <File Include="bin/ru/Microsoft.AspNet.Identity.Owin.resources.dll">
-      <publishTime>04/03/2015 17:09:52</publishTime>
+      <publishTime>03/04/2015 17:09:52</publishTime>
     </File>
     <File Include="bin/ru/Microsoft.Owin.Host.SystemWeb.resources.dll">
       <publishTime>02/13/2015 13:24:52</publishTime>
@@ -304,7 +331,7 @@
       <publishTime>01/28/2015 04:02:30</publishTime>
     </File>
     <File Include="bin/ru/System.Web.Optimization.resources.dll">
-      <publishTime>02/11/2014 15:28:42</publishTime>
+      <publishTime>11/02/2014 15:28:42</publishTime>
     </File>
     <File Include="bin/ru/System.Web.Razor.resources.dll">
       <publishTime>01/28/2015 04:02:40</publishTime>
@@ -325,7 +352,7 @@
       <publishTime>01/28/2015 04:02:18</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
-      <publishTime>02/11/2014 16:26:04</publishTime>
+      <publishTime>11/02/2014 16:26:04</publishTime>
     </File>
     <File Include="bin/System.Web.Razor.dll">
       <publishTime>01/28/2015 04:02:32</publishTime>
@@ -340,16 +367,16 @@
       <publishTime>01/28/2015 04:04:30</publishTime>
     </File>
     <File Include="bin/WebActivatorEx.dll">
-      <publishTime>10/05/2016 13:11:52</publishTime>
+      <publishTime>05/10/2016 13:11:52</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
-      <publishTime>09/10/2013 18:28:38</publishTime>
+      <publishTime>10/09/2013 18:28:38</publishTime>
     </File>
     <File Include="bin/WebUI.dll">
-      <publishTime>02/01/2018 03:04:35</publishTime>
+      <publishTime>02/05/2018 00:22:58</publishTime>
     </File>
     <File Include="bin/WebUI.pdb">
-      <publishTime>02/01/2018 03:04:35</publishTime>
+      <publishTime>02/05/2018 00:22:58</publishTime>
     </File>
     <File Include="Content/bootstrap.css">
       <publishTime>01/27/2018 16:16:27</publishTime>
@@ -358,7 +385,7 @@
       <publishTime>01/27/2018 16:16:27</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>01/30/2018 00:45:46</publishTime>
+      <publishTime>02/04/2018 00:10:41</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>01/27/2018 16:15:50</publishTime>
@@ -499,7 +526,7 @@
       <publishTime>01/30/2018 00:33:42</publishTime>
     </File>
     <File Include="Notes.txt">
-      <publishTime>01/30/2018 19:26:01</publishTime>
+      <publishTime>02/04/2018 01:48:12</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>01/27/2018 16:16:27</publishTime>
@@ -571,7 +598,7 @@
       <publishTime>01/27/2018 16:16:44</publishTime>
     </File>
     <File Include="Views/Account/Register.cshtml">
-      <publishTime>01/27/2018 16:16:44</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Account/ResetPassword.cshtml">
       <publishTime>01/27/2018 16:16:44</publishTime>
@@ -589,7 +616,7 @@
       <publishTime>01/27/2018 16:16:44</publishTime>
     </File>
     <File Include="Views/Admin/Index.cshtml">
-      <publishTime>01/29/2018 23:18:28</publishTime>
+      <publishTime>02/04/2018 00:35:33</publishTime>
     </File>
     <File Include="Views/Admin/ProductEdit.cshtml">
       <publishTime>01/30/2018 02:50:43</publishTime>
@@ -601,16 +628,16 @@
       <publishTime>01/30/2018 02:33:14</publishTime>
     </File>
     <File Include="Views/Cart/Index.cshtml">
-      <publishTime>02/01/2018 02:55:35</publishTime>
+      <publishTime>02/04/2018 16:42:55</publishTime>
     </File>
     <File Include="Views/Cart/Viget.cshtml">
-      <publishTime>02/01/2018 02:44:58</publishTime>
+      <publishTime>02/03/2018 23:49:13</publishTime>
     </File>
     <File Include="Views/Cart/_IndexOrdersPartial.cshtml">
-      <publishTime>02/01/2018 02:54:20</publishTime>
+      <publishTime>02/04/2018 16:47:41</publishTime>
     </File>
     <File Include="Views/Catalog/Index.cshtml">
-      <publishTime>01/30/2018 00:45:39</publishTime>
+      <publishTime>02/04/2018 00:12:29</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
       <publishTime>01/28/2018 16:38:01</publishTime>
@@ -619,7 +646,7 @@
       <publishTime>01/28/2018 23:29:05</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>01/30/2018 19:32:27</publishTime>
+      <publishTime>02/03/2018 23:42:51</publishTime>
     </File>
     <File Include="Views/Manage/AddPhoneNumber.cshtml">
       <publishTime>01/27/2018 16:16:45</publishTime>
@@ -628,7 +655,7 @@
       <publishTime>01/27/2018 16:16:45</publishTime>
     </File>
     <File Include="Views/Manage/Index.cshtml">
-      <publishTime>01/27/2018 16:16:45</publishTime>
+      <publishTime>02/05/2018 00:06:49</publishTime>
     </File>
     <File Include="Views/Manage/ManageLogins.cshtml">
       <publishTime>01/27/2018 16:16:45</publishTime>
@@ -646,7 +673,7 @@
       <publishTime>01/27/2018 16:16:45</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>02/01/2018 03:02:48</publishTime>
+      <publishTime>02/05/2018 00:04:46</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>01/27/2018 16:16:45</publishTime>

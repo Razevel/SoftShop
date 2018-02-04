@@ -6,8 +6,8 @@ using Domain.Entities;
 
 namespace Domain.Concrete
 {
-    public class ShopDbInitializer : DropCreateDatabaseAlways<EFDbContext>
-    //public class ShopDbInitializer : CreateDatabaseIfNotExists<EFDbContext>
+    //public class ShopDbInitializer : DropCreateDatabaseAlways<EFDbContext>
+    public class ShopDbInitializer : CreateDatabaseIfNotExists<EFDbContext>
     {
         protected override void Seed(EFDbContext db)
         {

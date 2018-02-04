@@ -10,19 +10,20 @@
 
 <style type="text/css">
     .d {
-        min-height: 300px;
+        min-height: 200px;
+        padding-top: 20px;
     }
 </style>
-
+<div style="padding: 20px 0px"></div>
 <div class="row">
-    <div class="col-md-4 alert-info d">
+    <div class="col-md-3 d">
         <ul class="list-group">
-            <li class="list-group-item">Оформить заказ</li>
-            <li class="list-group-item">Действие</li>
-            <li class="list-group-item">Еще действие</li>
+            <li class="list-group-item">
+                @Html.ActionLink("Оформить заказ", "", "")
+            </li>
         </ul>
     </div>
-    <div class="col-md-8 alert-danger d" id="cart-index-table">
+    <div class="col-md-9 d" id="cart-index-table">
         @Html.Action("CartTable", "Cart")
     </div>
 </div>

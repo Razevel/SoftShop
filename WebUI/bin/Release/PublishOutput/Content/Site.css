@@ -38,6 +38,14 @@ textarea {
     border-color: #ffffff;
 }
 
+#search-form-main {
+    width: 65%;
+    float: left;
+}
+
+#bs-example-navbar-collapse-1 form button {
+    width: 30%;
+}
 
 .product {
     margin: 1.2%;
@@ -53,6 +61,15 @@ textarea {
     .product {
         width: 47.6%;
         float: left;
+    }
+}
+@media screen and (min-width: 768px) {
+    #search-form-main {
+        width: auto;
+        float: none;
+    }
+    #bs-example-navbar-collapse-1 form button {
+        width: auto;
     }
 }
 

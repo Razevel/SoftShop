@@ -284,6 +284,7 @@
     <Content Include="fonts\font-awesome-4.7.0\scss\_stacked.scss" />
     <Content Include="fonts\font-awesome-4.7.0\scss\_variables.scss" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
