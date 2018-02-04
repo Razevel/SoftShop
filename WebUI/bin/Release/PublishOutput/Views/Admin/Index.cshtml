@@ -1,0 +1,36 @@
+﻿@model WebUI.Controllers.AdminIndexViewModel
+@{
+    ViewBag.Title = "Админ панель";
+    AjaxOptions ajaxOptions = new AjaxOptions
+    {
+        UpdateTargetId = "admin-content-panel"
+    };
+}
+
+<br/>
+<br/>
+
+<div class="row">
+
+    <div class="col-md-3">
+
+        <div class="list-group">
+
+            @foreach (var i in Model.Categories)
+            {
+                using (Ajax.BeginForm("Category", "Admin", null, ajaxOptions))
+                {
+                    @Html.Hidden("CategoryID", (int)i.Key)
+                    <button type="submit" class="btn-block list-group-item">@i.Value</button>
+                }
+            }
+
+        </div>
+
+    </div>
+
+    <div class="col-md-9" id="admin-content-panel">
+
+    </div>
+
+</div>

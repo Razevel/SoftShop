@@ -1,0 +1,29 @@
+﻿@using Domain.Entities
+@model Cart
+@{
+    ViewBag.Title = "Корзина";
+    AjaxOptions ajaxOptions = new AjaxOptions()
+    {
+        UpdateTargetId = "cart-index-table"
+    };
+}
+
+<style type="text/css">
+    .d {
+        min-height: 300px;
+    }
+</style>
+
+<div class="row">
+    <div class="col-md-4 alert-info d">
+        <ul class="list-group">
+            <li class="list-group-item">Оформить заказ</li>
+            <li class="list-group-item">Действие</li>
+            <li class="list-group-item">Еще действие</li>
+        </ul>
+    </div>
+    <div class="col-md-8 alert-danger d" id="cart-index-table">
+        @Html.Action("CartTable", "Cart")
+    </div>
+</div>
+

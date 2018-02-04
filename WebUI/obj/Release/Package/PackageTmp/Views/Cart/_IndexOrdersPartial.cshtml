@@ -1,0 +1,34 @@
+﻿@using Domain.Entities
+@model Cart
+@{
+    ViewBag.Title = "_IndexOrdersPartial";
+    AjaxOptions ajaxOptions = new AjaxOptions
+    {
+        UpdateTargetId = "cart-index-table",
+        OnComplete = "itWorks()"
+    };
+}
+<style type="text/css">
+    .img-cart-mini img { max-width: 100%; }
+</style>
+
+@foreach (Order order in Model.Orders)
+{
+    <div class="row">
+        <div class="col-md-4 img-cart-mini">
+            <img src="~/images/@order.Product.Category.PathPart/@order.Product.ID/main-catalog-mini.jpg"/>
+        </div>
+        <div class="col-md-3">@order.Product.Name</div>
+        <div class="col-md-1">@order.Quantity</div>
+        <div class="col-md-2">@order.TotalCost</div>
+        <div class="col-md-2">
+            @using (Ajax.BeginForm("Remove", "Cart", new {pageType = "cartIndex"}, ajaxOptions, new {@class = "myForm"}))
+            {
+                <input type="hidden" name="id" value="@order.Product.ID"/>
+                <input type="number" name="q" value="1" min="1" max="@order.Quantity"/>
+                <button type="submit">Удалить</button>
+            }
+        </div>
+    </div>
+    <br/>
+}

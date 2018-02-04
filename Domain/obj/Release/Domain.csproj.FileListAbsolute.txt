@@ -1,0 +1,17 @@
+D:\SoftShop\Domain\bin\Release\Domain.dll.config
+D:\SoftShop\Domain\bin\Release\Domain.dll
+D:\SoftShop\Domain\bin\Release\Domain.pdb
+D:\SoftShop\Domain\bin\Release\EntityFramework.dll
+D:\SoftShop\Domain\bin\Release\EntityFramework.SqlServer.dll
+D:\SoftShop\Domain\bin\Release\Microsoft.AspNet.Identity.Core.dll
+D:\SoftShop\Domain\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\SoftShop\Domain\bin\Release\EntityFramework.xml
+D:\SoftShop\Domain\bin\Release\EntityFramework.SqlServer.xml
+D:\SoftShop\Domain\bin\Release\Microsoft.AspNet.Identity.Core.xml
+D:\SoftShop\Domain\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\SoftShop\Domain\bin\Release\ru\Microsoft.AspNet.Identity.Core.resources.dll
+D:\SoftShop\Domain\bin\Release\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\SoftShop\Domain\obj\Release\Domain.csprojResolveAssemblyReference.cache
+D:\SoftShop\Domain\obj\Release\Domain.csproj.CoreCompileInputs.cache
+D:\SoftShop\Domain\obj\Release\Domain.dll
+D:\SoftShop\Domain\obj\Release\Domain.pdb

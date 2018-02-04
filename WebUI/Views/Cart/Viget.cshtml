@@ -1,0 +1,29 @@
+﻿@using Domain.Entities
+@model Cart
+
+@{
+
+    AjaxOptions ajaxOptions = new AjaxOptions
+    {
+        UpdateTargetId = "CartViget",
+        OnComplete = "updateItem()"
+    };
+}
+
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" id="sdsd">
+    @Model.TotalCost&nbsp;руб.&nbsp;&nbsp;&nbsp;&nbsp;
+    <i style="font-size: 18px" class="fa fa-shopping-bag"></i>
+</a>
+<ul class="dropdown-menu">
+
+    <li>
+        @Html.ActionLink("Перейти в корзину", "Index", "Cart", null, new {@class = ""})
+    </li>
+    <li>
+        @using (Ajax.BeginForm("Clear", "Cart", ajaxOptions, new {@class = "form-inline"}))
+        {
+            <button type="submit" class="btn btn-link" style="width: 100%;" id="qwqw">Очистить корзину</button>
+        }
+    </li>
+
+</ul>

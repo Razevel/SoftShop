@@ -1,0 +1,22 @@
+﻿@using Domain.Entities
+@model Cart
+
+@{
+    ViewBag.Title = "About";
+    AjaxOptions ajaxOptions = new AjaxOptions
+    {
+        UpdateTargetId = "CartViget"
+    };
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+
+@using (Ajax.BeginForm("Add", "Cart", ajaxOptions))
+{
+<div>
+    <input type="number" name="q" min="1" value="1" />
+    <input type="number" name="id" min="1" value="1" />
+    <button type="submit">Добавить</button>
+</div>
+}

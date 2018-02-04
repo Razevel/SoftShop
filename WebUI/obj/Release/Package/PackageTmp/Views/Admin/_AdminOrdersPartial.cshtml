@@ -1,0 +1,41 @@
+﻿@using Domain.Entities
+@model IEnumerable<Order>
+
+@{
+    ViewBag.Title += "Заказы";
+}
+
+@foreach (Order o in Model)
+{
+    <div class="product">
+
+        <dl class="dl-horizontal" style="min-height: 100px;">
+
+            <dt>ID заказа</dt>
+            <dd>@o.ID</dd>
+
+            <dt>ID товара</dt>
+            <dd>@o.Product.ID</dd>
+
+            <dt>Название товара</dt>
+            <dd>@o.Product.Name</dd>
+
+            <dt>Количество</dt>
+            <dd>@o.Quantity</dd>
+
+            <dt>Цена за шт.</dt>
+            <dd>@o.CostPerItem</dd>
+
+            <dt>Итого</dt>
+            <dd>@o.TotalCost</dd>
+
+            <dt>ID сессии</dt>
+            <dd>@o.SessionID</dd>
+
+            <dt>ID пользователя</dt>
+            <dd>@o.UserID</dd>
+
+        </dl>
+
+    </div>
+}

@@ -1,0 +1,15 @@
+﻿@using Domain.Entities
+@model IEnumerable<Product>
+
+@{
+    ViewBag.Title = "Contact";
+    AjaxOptions ajaxOptions = new AjaxOptions
+    {
+        UpdateTargetId = "CartViget"
+    };
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+Мой <a href="mailto:krowstel@gmail.com">email</a> <br/>
+Другие проекты <a href="www.github/razevel">GitHub</a>

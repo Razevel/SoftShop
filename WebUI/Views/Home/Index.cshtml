@@ -1,0 +1,101 @@
+﻿@using WebUI.Controllers
+@{
+    ViewBag.Title = "Главная";
+}
+
+<section>
+
+    <div class="container">
+        <img src="assets/images/krasivyievyazannyieveshhifo1-523x523.jpg" style="width: 55%;" alt="" title="">
+        <h1>
+            <strong>Создай свой стиль</strong>
+        </h1>
+        <p>
+            Если вы не нашли то искали, вы всегда можете отправить заявку
+            на создание индивидуального изделия по Вашим пожеланиям.
+        </p>
+        <a class="btn btn-primary" href="">ПОДРОБНЕЕ</a>
+        <a class="btn btn-warning" href="">ОТПРАВИТЬ ЗАЯВКУ</a>
+    </div>
+
+</section>
+<hr/>
+
+<section>
+    <div class="container">
+        <h2>Каталог</h2>
+        <img style="width: 74%;" src="assets/images/modnye-vyazanye-veshi-2017-610x414.jpg" alt="Mobirise" title="">
+        @Html.ActionLink("ПРОСМОТР", "Index", "Catalog", null, new {@class = "btn btn-success"})
+    </div>
+</section>
+<hr/>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+
+                <h4>Качество</h4>
+                <p>
+                    Ручная вязка исключает возможность брака изделия.
+                    Использование только натуральных материалов.
+                </p>
+            </div>
+
+            <div class="col-md-6">
+                <h4>Подход</h4>
+                <p>
+                    Нам важно важно Ваше мнение. В процессе изготовления мы можем
+                    предоставить фото, чтобы вы могли выразить свои пожелания.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<hr/>
+
+<section>
+    <div class="container " style="overflow: hidden">
+
+        <div class="col-md-6">
+
+            <img src="assets/images/1-1-640x669.jpg" alt="" title="">
+            <div class="text-center">
+                <a href="" class="btn btn-primary">Комплекты</a>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+                <img  src="assets/images/16908293-735417253293643-896244887379247104-n-640x640.jpg" alt="Mobirise" title="">
+            
+            <div class="text-center">
+                <a href="" class="btn btn-primary">Носочки</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<hr/>
+
+<section>
+    <div class="container">
+        
+            <div class="col-md-8">
+                <h2>"МЯГКО" В СОЦСЕТЯХ</h2>
+
+                <a href="@((new Config()).GoogleLink)" class="btn btn-danger">
+                    <i class="fa fa-google-plus fa-2x"></i>
+                </a>
+                        
+                <a href="@((new Config()).VkLink)" class="btn btn-primary">
+                    <i class="fa fa-vk fa-2x"></i>
+                </a>
+                <a href="@((new Config()).OkLink)" class="btn btn-warning">
+                    <i class="fa fa-odnoklassniki fa-2x"></i>
+                </a>
+              
+            </div>
+       
+    </div>
+</section>

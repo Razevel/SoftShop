@@ -1,0 +1,201 @@
+﻿
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title – myaagko.com</title>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/AJAX")
+    @RenderSection("scripts", required: false)
+    <script type="text/javascript" src="~/Scripts/Main.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/fonts/font-awesome-4.7.0/css/font-awesome.css"/>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+       
+            @Html.ActionLink("Мягко.ru", "Index", "Home", null, new { @class = "navbar-brand" })
+
+       
+            <ul class="nav navbar-nav">
+                <li id="HeaderNav-li-MainPag">
+                    @Html.ActionLink("Главная", "Index", "Home")
+                </li>
+                <li>
+                    @Html.ActionLink("Каталог", "Index", "Catalog")
+                </li>
+                <li>
+                    @Html.ActionLink("Админ панель", "Index", "Admin")
+                </li>
+            </ul>
+
+
+            @using (@Html.BeginForm("Index", "Catalog", FormMethod.Get, new {@class = "navbar-form navbar-left", role = "Search"}))
+            {
+            <div class="form-group">
+                @Html.TextBox("search", null, new { type = "text", @class = "form-control", placeholder = "Категория/Название" })
+            </div>
+                <button type="submit" class="btn btn-default">Поиск</button>
+            
+            }
+
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown" id="CartViget">
+                    @Html.Action("Viget", "Cart")
+                </li>
+            </ul>
+
+
+    </div>
+</nav>
+
+<div class="container body-content">
+    
+
+    @RenderBody()
+    <hr/>
+
+    
+</div>
+
+
+</body>
+</html>
+
+
+
+
+@foreach (Product p in Model)
+{
+
+    var alt = (p.Name + " " + p.About);
+    alt = alt.Length > 50 ? alt.Substring(0, 50) : alt;
+
+    <div class="product">
+        <div style="width: 100%; height: 310px; overflow: hidden">
+            <img src="~/images/@p.Category.PathPart/@p.ID/main-catalog-mini.jpg" alt="@alt" style="width: 100%;">
+        </div>
+        <h4 class="text-center" style="height: 50px">@p.Name</h4>
+        <dl class="dl-horizontal" style="min-height: 100px;">
+
+            <dt>Подробнее</dt>
+            <dd>@p.About</dd>
+
+            <dt>Категория</dt>
+            <dd>@p.Category.Name</dd>
+
+            <dt>Цена</dt>
+            <dd>@p.CurrentPrice</dd>
+
+            <dt>В наличае</dt>
+            <dd>@p.Quantity</dd>
+        </dl>
+        @using (Ajax.BeginForm("Add", "Cart", ajaxOptions))
+        {
+            @Html.Hidden("id", p.ID)
+            <button type="submit" class="btn btn-block btn-success">Добавить</button>
+        }
+    </div>
+
+}
+<div class="clearfix"></div>
+
+
+
+
+				<ul class="products clearfix">
+
+@foreach (Product p in Model)
+{
+
+    var alt = (p.Name + " " + p.About);
+    alt = alt.Length > 50 ? alt.Substring(0, 50) : alt;
+    
+
+    <li class="product-wrapper">
+        <a href="" class="product">
+            <div class="product-photo">
+                <img src="~/images/Gloves/4/main-catalog-mini.jpg" alt="">
+            </div>
+            <p>
+                adsfalskgfjnbasl;dnfal;sdnfadsfalskgfjnbasl;dnfal;sdnfadsfalskgfjnbasl;dnfal;sdnfadsfalskgfjnbasl;dnfal;sdnfadsfalskgfjnbasl;dnfal;sdnfadsfalskgfjnbasl;dnfal;sdnfadsfalskgfjnbasl;dnfal;sdnfadsfalskgfjnbasl;dnfal;sdnfadsfalskgfjnbasl;dnfal;sdnfadsfalskgfjnbasl;dnfal;sdnfadsfalskgfjnbasl;dnfal;sdnfadsfalskgfjnbasl;dnfal;sdnfadsfalskgfjnbasl;dnfal;sdnfadsfalskgfjnbasl;dnfal;sdnf
+            </p>
+        </a>
+    </li>
+
+
+}
+</ul>
+
+
+<!--
+<div class="table-responsive">
+
+    <table class="table table-hover table-bordered ">
+
+        <tr>
+            <th>Наименование</th>
+            <th>Цена / шт.</th>
+            <th>Кол-во</th>
+            <th>Общая стоимость</th>
+            <th>Удалить</th>
+        </tr>
+
+        foreach (Order o in Model.Orders)
+        {
+        <tr>
+            <td>o.Product.Name</td>
+            <td>o.CostPerItem</td>
+            <td>o.Quantity</td>
+            <td>o.TotalCost</td>
+            <td>
+                using (Ajax.BeginForm("Remove", "Cart", ajaxOptions))
+                {
+                <input type="hidden" name="id" value="o.Product.ID"/>
+                <input type="number" name="q" min="1" max="o.Quantity" value="1"/>
+                <button type="submit" class="btn btn-danger">Удалить</button>
+                }
+            </td>
+        </tr>
+        }
+
+    </table>
+</div>  -->
+
+Старая тема продуктов
+
+<div class="product">
+        <div style="width: 100%; height: 310px; overflow: hidden">
+            <img src="~/images/@p.Category.PathPart/@p.ID/main-catalog-mini.jpg" alt="@alt" style="width: 100%;">
+        </div>
+        <h4 class="text-center" style="height: 50px">@p.Name</h4>
+        <dl class="dl-horizontal" style="min-height: 100px;">
+            
+            <dt>Подробнее</dt>
+            <dd>@p.About</dd>
+
+            <dt>Категория</dt>
+            <dd>@p.Category.Name</dd>
+
+            <dt>Цена</dt>
+            <dd>@p.CurrentPrice</dd>
+            
+            <dt>В наличае</dt>
+            <dd>@p.Quantity</dd>
+        </dl>
+        @using (Ajax.BeginForm("Add", "Cart", ajaxOptions))
+        {
+            @Html.Hidden("id", p.ID)
+            <button type="submit" class="btn btn-block btn-success">Добавить</button>
+        }
+    </div>
+

@@ -1,0 +1,81 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+#qwqw:hover{
+    color: #ffffff;
+    background-color: #428bca;
+    border-color: #357ebd;
+    text-decoration: none
+}
+
+
+#qwqw {
+    height: 80%;
+    color: #000000;
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
+#search-form-main {
+    width: 65%;
+    float: left;
+}
+
+#bs-example-navbar-collapse-1 form button {
+    width: 30%;
+}
+
+.product {
+    margin: 1.2%;
+}
+
+@media screen and (max-width: 449px) {
+    .product {
+        width: 97.6%;
+    }
+}
+
+@media screen and (min-width: 450px) {
+    .product {
+        width: 47.6%;
+        float: left;
+    }
+}
+@media screen and (min-width: 768px) {
+    #search-form-main {
+        width: auto;
+        float: none;
+    }
+    #bs-example-navbar-collapse-1 form button {
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .product {
+        width: 30.92%;
+        float: left;
+    }
+}
